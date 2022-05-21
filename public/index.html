@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>logo-vbid.jpg">
+  <title>VBID.app</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+
+  <div id="app">
+
+  </div>
+
+
+</body>
+
+
+<!--------------------------------------------return home ------------------------------------------------->
+<div>
+  <!-- import icon font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <!-- Import thư viện JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+  </script>
+
+  <script>
+    // kéo xuống khoảng cách 500px thì xuất hiện nút Top-up
+    var offset = 500;
+    // thời gian di trượt 0.75s ( 1000 = 1s )
+    var duration = 750;
+    $(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > offset)
+          $('#top-up').fadeIn(duration); else
+          $('#top-up').fadeOut(duration);
+      });
+      $('#top-up').click(function () {
+        $('body,html').animate({ scrollTop: 0 }, duration);
+      });
+    });
+  </script>
+  <div title="Về đầu trang" id="top-up">
+    <i class="fas fa-fighter-jet fa-rotate-270"></i>
+  </div>
+</div>
+
+
+<style>
+  #top-up {
+    font-size: 3rem;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    color: #589eef;
+    bottom: 20px;
+    right: 0px;
+    display: none;
+  }
+
+  #top-up:hover {
+    color: #ef7d58;
+  }
+
+
+
+  .theme--light.v-application {
+    background: none;
+  }
+
+  .v-responsive {
+    flex: unset;
+  }
+
+  .v-application .px-10 {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .row {
+    margin: auto;
+  }
+
+  .v-tabs:not(.v-tabs--vertical):not(.v-tabs--right)>.v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__prev {
+    display: none;
+
+  }
+</style>
+
+</html>
