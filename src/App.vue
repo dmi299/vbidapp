@@ -649,7 +649,6 @@ export default {
   background-color: #4caf50;
 }
 
-@media screen and (max-width: 320px) {
-}
+
 </style>
 
